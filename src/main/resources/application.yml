@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: # 추후 적용
+    username: # 추후 적용
+    password: # 추후 적용
+
+  jpa:
+    database: mysql
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+        ddl-auto: create
+    open-in-view: true
+    defer-datasource-initialization: true
