@@ -20,9 +20,6 @@ public class Calculator {
     @Column(nullable = false)
     private String formula;
 
-    @Column(nullable = false)
-    private Boolean active;
-
     @ManyToOne
     @JoinColumn(nullable = false, name = "userId")
     private User user;
