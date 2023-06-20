@@ -18,10 +18,10 @@ public class Strategy {
     private Long id;
 
     @Column(nullable = false)
-    private Boolean active;
+    private String formula;
 
     @Column(nullable = false)
-    private Boolean publicOf;
+    private String result;
 
     @ManyToOne
     @JoinColumn(nullable = false, name = "userId")

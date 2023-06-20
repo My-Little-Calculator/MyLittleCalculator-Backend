@@ -1,5 +1,6 @@
 package com.example.mylittlecalculator.domain.variable;
 
+import com.example.mylittlecalculator.domain.strategy.Strategy;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -18,4 +19,8 @@ public class Variable {
 
     @Column(nullable = false)
     private String formula;
+
+    @ManyToOne
+    @JoinColumn(nullable = false, name = "strategyId")
+    private Strategy strategy;
 }

@@ -19,8 +19,12 @@ import javax.persistence.*;
 public class Account {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long userId;
+
+    @MapsId
+    @OneToOne
+    @JoinColumn(nullable = false, name = "userId")
+    private User user;
 
     @Column(nullable = false)
     private String email;
@@ -30,8 +34,4 @@ public class Account {
 
     @Column(nullable = true)
     private String naverOauthKey;
-
-    @OneToOne
-    @JoinColumn(nullable = false, name = "userId")
-    private User user;
 }
