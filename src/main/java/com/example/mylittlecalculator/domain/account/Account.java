@@ -19,11 +19,11 @@ import javax.persistence.*;
 public class Account {
 
     @Id
-    private Long userId;
+    private Long id;
 
     @MapsId
     @OneToOne
-    @JoinColumn(nullable = false, name = "userId")
+    @JoinColumn(nullable = false, name = "id")
     private User user;
 
     @Column(nullable = false)
