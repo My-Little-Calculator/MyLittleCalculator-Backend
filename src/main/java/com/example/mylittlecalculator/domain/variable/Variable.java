@@ -1,6 +1,6 @@
-package com.example.mylittlecalculator.variable;
+package com.example.mylittlecalculator.domain.variable;
 
-import com.example.mylittlecalculator.strategy.Strategy;
+import com.example.mylittlecalculator.domain.strategy.Strategy;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

@@ -1,6 +1,6 @@
-package com.example.mylittlecalculator.calculator.domain;
+package com.example.mylittlecalculator.domain.calculator.domain;
 
-import com.example.mylittlecalculator.user.domain.User;
+import com.example.mylittlecalculator.domain.user.domain.User;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

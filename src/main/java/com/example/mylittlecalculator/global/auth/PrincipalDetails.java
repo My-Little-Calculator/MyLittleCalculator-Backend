@@ -1,6 +1,6 @@
-package com.example.mylittlecalculator.user.auth;
+package com.example.mylittlecalculator.global.auth;
 
-import com.example.mylittlecalculator.user.domain.User;
+import com.example.mylittlecalculator.domain.user.domain.User;
 import lombok.Getter;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.oauth2.core.user.OAuth2User;

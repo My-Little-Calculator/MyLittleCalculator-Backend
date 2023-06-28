@@ -1,6 +1,6 @@
 package com.example.mylittlecalculator.global.config;
 
-import com.example.mylittlecalculator.user.application.UserService;
+import com.example.mylittlecalculator.global.auth.PrincipalOauth2UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -13,7 +13,7 @@ import org.springframework.security.web.SecurityFilterChain;
 @RequiredArgsConstructor
 public class SecurityConfig {
 
-    private final UserService userService;
+    private final PrincipalOauth2UserService principalOauth2UserService;
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
@@ -33,7 +33,7 @@ public class SecurityConfig {
                 .and()
                     .oauth2Login()
                         .userInfoEndpoint()
-                        .userService(userService);
+                        .userService(principalOauth2UserService);
 
         return http.build();
     }
