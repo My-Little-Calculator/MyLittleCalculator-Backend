@@ -1,6 +1,6 @@
-package com.example.mylittlecalculator.domain.calculator;
+package com.example.mylittlecalculator.variable;
 
-import com.example.mylittlecalculator.domain.user.User;
+import com.example.mylittlecalculator.strategy.Strategy;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -9,9 +9,9 @@ import javax.persistence.*;
 
 @Getter
 @Entity
-@Table(name = "calculator")
+@Table(name = "variable")
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class Calculator {
+public class Variable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,6 +21,6 @@ public class Calculator {
     private String formula;
 
     @ManyToOne
-    @JoinColumn(nullable = false, name = "userId")
-    private User user;
+    @JoinColumn(nullable = false, name = "strategyId")
+    private Strategy strategy;
 }
