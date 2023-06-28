@@ -1,4 +1,4 @@
-package com.example.mylittlecalculator.user.domain;
+package com.example.mylittlecalculator.domain.user.domain;
 
 import lombok.*;
 

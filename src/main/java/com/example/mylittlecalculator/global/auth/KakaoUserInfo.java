@@ -1,12 +1,12 @@
-package com.example.mylittlecalculator.user.auth;
+package com.example.mylittlecalculator.global.auth;
 
 import java.util.Map;
 
-public class NaverUserInfo implements OAuth2UserInfo{
+public class KakaoUserInfo implements OAuth2UserInfo{
 
     private Map<String, Object> attributes;
 
-    public NaverUserInfo(Map<String, Object> attributes) {
+    public KakaoUserInfo(Map<String, Object> attributes){
         this.attributes = attributes;
     }
 
@@ -14,11 +14,13 @@ public class NaverUserInfo implements OAuth2UserInfo{
         return attributes.get("email").toString();
     }
 
-    public String getOAuthId() {
+    public String getOauthId() {
         return attributes.get("id").toString();
     }
 
-    public Map<String, Object> getAttributes(){
+    @Override
+    public Map<String, Object> getAttribute() {
         return this.attributes;
     }
+
 }
