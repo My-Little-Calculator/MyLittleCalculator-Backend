@@ -25,7 +25,7 @@ public class PrincipalOauth2UserService extends DefaultOAuth2UserService {
 
         OAuth2UserInfo oAuth2UserInfo;
         if(registrationId.toUpperCase().equals(Registration.KAKAO.toString())){
-            oAuth2UserInfo = new KakaoUserInfo(oAuth2User.getAttribute("id"));
+            oAuth2UserInfo = new KakaoUserInfo(oAuth2User.getAttributes());
         }
         else if(registrationId.toUpperCase().equals(Registration.NAVER.toString())){
             oAuth2UserInfo = new NaverUserInfo(oAuth2User.getAttribute("response"));

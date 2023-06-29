@@ -11,7 +11,8 @@ public class KakaoUserInfo implements OAuth2UserInfo{
     }
 
     public String getEmail() {
-        return attributes.get("email").toString();
+        return (attributes.get("email") != null) ?
+                attributes.get("email").toString() : null;
     }
 
     public String getOauthId() {
