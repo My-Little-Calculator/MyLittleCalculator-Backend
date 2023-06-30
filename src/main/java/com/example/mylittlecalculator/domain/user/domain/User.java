@@ -27,6 +27,11 @@ public class User {
     @Enumerated(EnumType.STRING)
     private Registration registration;
 
+    public void updateInfo(String email, String nickname) {
+        this.email = email;
+        this.nickname = nickname;
+    }
+
     @Builder
     public User(String oAuthId, String email, String nickname, String registrationId) {
         this.oauthId = oAuthId;
